@@ -17,24 +17,4 @@ export default defineConfig({
   schema: {
     types: schemaTypes,
   },
-  form: {
-    components: {
-      field: (props) => {
-        if (props.path.length === 1) {
-          return (
-            <div
-              style={{
-                // border: '1px solid red',
-                padding: 30,
-              }}
-            >
-              {props.renderDefault(props)}
-            </div>
-          )
-        }
-
-        return props.renderDefault(props)
-      },
-    },
-  },
 })
